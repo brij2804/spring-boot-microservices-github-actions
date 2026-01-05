@@ -1,0 +1,23 @@
+jobs:
+  deploy-dev:
+    runs-on: ubuntu-latest
+    environment: dev
+    steps:
+      - name: Deploy to Dev
+        run: echo "Deploying to Dev using ${{ secrets.SERVER_IP }}"
+
+  deploy-it:
+    needs: deploy-dev
+    runs-on: ubuntu-latest
+    environment: it
+    steps:
+      - name: Deploy to IT
+        run: echo "Deploying to IT after Dev success"
+
+  deploy-uat:
+    needs: deploy-it
+    runs-on: ubuntu-latest
+    environment: uat
+    steps:
+      - name: Deploy to UAT
+        run: echo "Deploying to UAT after IT success"
