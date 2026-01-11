@@ -12,7 +12,7 @@
 <module>currency-conversion-service</module>
 <module>currency-exchange-service</module>
 <module>limits-service</module>
-    <module>netflix-eureka-naming-server</module>
-    <module>spring-cloud-config-server</module>
+<module>netflix-eureka-naming-server</module>
+<module>spring-cloud-config-server</module>
 </modules>
 </project>
